@@ -68,7 +68,14 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+
+#Plugins
+plugins=(
+asdf
+git
+zsh-autosuggestions
+zsh-syntax-highlighting
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -114,7 +121,7 @@ alias gdh='git diff HEAD'
 alias glg='git log --graph --oneline --decorate --color --all'
 alias glod='git log --oneline --decorate'
 alias glp='git log -p'
-alias gnap='git add -N --ignore-removal . && gap && gref'
+alias gnap='git add -N .; git add -p'
 alias gp='git push'
 alias gpr='git pull --rebase'
 alias gr='git rebase'
